@@ -101,7 +101,7 @@ ggplot(men_total,aes(x = reorder(death_dummy, -n) , y = n)) +
   theme_grey() +
   labs(x="Green - Alive  Red -Dead",y = "Count" , title = "Total cases")
 
-mean(men$death_dummy, na.rm = TRUE)*100
+mean(men$death_dummy, na.rm = TRUE)
 
 
 
