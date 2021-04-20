@@ -101,7 +101,7 @@ ggplot(men_total,aes(x = reorder(death_dummy, -n) , y = n)) +
   theme_grey() +
   labs(x="Green - Alive  Red -Dead",y = "Count" , title = "Total cases")
 
-mean(men$death_dummy, na.rm = TRUE)
+mean(men$death_dummy, na.rm = TRUE)*100
 
 
 
@@ -113,7 +113,7 @@ ggplot(women_total,aes(x = reorder(death_dummy, -n) , y = n)) +
   theme_grey() +
   labs(x="Alive = 0  Dead = 1",y = "Count" , title = "Total cases")
 
-mean(women$death_dummy, na.rm = TRUE) 
+mean(women$death_dummy, na.rm = TRUE)*100
 
 
 t.test(men$death_dummy, women$death_dummy, alternative="two.sided", conf.level = 0.99)
