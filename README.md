@@ -1,5 +1,5 @@
 # Covid_R
-Analysis of a coronavirus dataset from Kaggle.
+Analysis of a coronavirus dataset from kaggle.
 
 Dataset contains information of age, gender, country of infected individuals along with confirmation of recovery, among other things.
 
