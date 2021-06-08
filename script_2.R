@@ -2,9 +2,8 @@ rm(list=ls())
 install.packages("tidyverse")
 library(ggplot2)
 library(dplyr)
-library(breakDown)
-       
 
+       
 data_covid <- read.csv("C:/Users/priyo/Downloads/covid_R/COVID19_line_list_data.csv")
 
 describe(data_covid)  
