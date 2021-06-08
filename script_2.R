@@ -1,10 +1,9 @@
 rm(list=ls())   
 install.packages("tidyverse")
-install.packages("Hmisc")
 library(ggplot2)
 library(dplyr)
 library(breakDown)
-library(Hmisc)        
+       
 
 data_covid <- read.csv("C:/Users/priyo/Downloads/covid_R/COVID19_line_list_data.csv")
 
