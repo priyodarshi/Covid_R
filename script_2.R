@@ -37,7 +37,6 @@ death_rate = (total_deaths/nrow(data_covid))*100
 death_rate
 
 
-
 alive = subset(data_covid, death_dummy == 0) 
 View(alive)                                 
 nrow(alive)                                 
@@ -49,25 +48,6 @@ nrow(dead)
 mean(alive$age , na.rm = TRUE) 
 mean(dead$age, na.rm = TRUE)
 boxplot(alive$age,dead$age,main ="Box plot by Age" , xlab= "Green - Alive   Red - Dead",ylab="Age", col = c("green","red"))      
-
-
-
-Alive_age_na=na.omit(alive$age)               
-plot(density(Alive_age_na),col = "green",main = "Alive density")  
-
-Dead_age_na=na.omit(dead$age)
-plot(density(Dead_age_na),col = "red",main = "Dead density")
-
-
-ggplot(alive, aes(x = age)) + 
-  geom_density(fill = "purple" , alpha = 0.5) +
-  geom_vline(xintercept = 25 , size = 1 , color = "yellow",linetype = "dashed")+
-  theme_dark()+expand_limits(x=c(20,105), y=0)
-
-ggplot(dead, aes(x = age)) +
-  geom_density(fill = "blue" , alpha = 0.5)+
-  geom_vline(xintercept = 25 , size = 1 , color = "yellow",linetype = "dashed")+
-  theme_dark()+expand_limits(x=c(20,105), y=0)
 
 
 t.test(alive$age, dead$age, alternative="two.sided", conf.level = 0.99)
